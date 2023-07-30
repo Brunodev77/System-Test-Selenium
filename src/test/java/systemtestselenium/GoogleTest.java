@@ -20,10 +20,9 @@ public class GoogleTest {
 	
 	@Before
 	public void setUp(){
-	  	// Indica onde está o driver do firefox
+		
 	  	System.setProperty("webdriver.gecko.driver", "C:\\webdrivers\\geckodriver.exe");
 
-		
 		driver = new FirefoxDriver();
 	}
 	
@@ -51,7 +50,7 @@ public class GoogleTest {
 	    															.startsWith("software"));
 	}
 
-	
+
 
 	@After
 	public void closing() throws Exception{

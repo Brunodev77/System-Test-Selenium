@@ -21,7 +21,7 @@ public class HerokuappTest {
 
     @Before
     public void setUp() {
-        // Indica onde está o driver do firefox
+
         System.setProperty("webdriver.gecko.driver", "C:\\webdrivers\\geckodriver.exe");
 
         driver = new FirefoxDriver();
@@ -43,8 +43,6 @@ public class HerokuappTest {
 
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
         wait.until(ExpectedConditions.titleContains("The Internet"));
-
-        System.out.println("Class name="+driver.getCurrentUrl());
 
         assertTrue("Erro - Login não aceito.",driver.getCurrentUrl()
         .equals("http://the-internet.herokuapp.com/secure"));

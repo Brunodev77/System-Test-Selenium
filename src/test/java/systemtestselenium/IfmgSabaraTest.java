@@ -21,7 +21,7 @@ public class IfmgSabaraTest {
 
     @Before
     public void setUp() {
-        // Indica onde está o driver do firefox
+
         System.setProperty("webdriver.gecko.driver", "C:\\webdrivers\\geckodriver.exe");
 
         driver = new FirefoxDriver();
@@ -75,8 +75,6 @@ public class IfmgSabaraTest {
 
         List<WebElement> element = driver.findElements(By.id("portalservicos-fale-conosco"));
         element.get(0).click();
-
-        System.out.println("Url=" + driver.getCurrentUrl());
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.titleContains("Instituto Federal de"));
